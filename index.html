@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coded Entertainment | DJ & Event Entertainment</title>
+  <meta name="description" content="Coded Entertainment delivers unforgettable DJ experiences for weddings, private parties, and corporate events.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { neon: '#00e5ff', dark: '#080b12', panel: '#111827' },
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 85px; }
+    body { background: #080b12; }
+    .hero-overlay {
+      background: linear-gradient(90deg, rgba(8,11,18,.95), rgba(8,11,18,.65), rgba(8,11,18,.3));
+    }
+    .neon-glow { text-shadow: 0 0 20px rgba(0,229,255,.5); }
+    .card-hover { transition: transform .3s ease, border-color .3s ease; }
+    .card-hover:hover { transform: translateY(-8px); border-color: #00e5ff; }
+    .form-input {
+      width: 100%; background: #080b12; border: 1px solid #374151;
+      border-radius: 8px; padding: 13px 15px; color: white; outline: none;
+      transition: border-color .2s ease;
+    }
+    .form-input:focus {
+      border-color: #00e5ff; box-shadow: 0 0 0 2px rgba(0,229,255,.15);
+    }
+    .form-input::placeholder { color: #6b7280; }
+    select.form-input { color-scheme: dark; }
+    textarea.form-input { resize: vertical; }
+  </style>
+</head>
+
+<body class="text-white font-sans antialiased">
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-dark/95 backdrop-blur-md border-b border-gray-800">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between" aria-label="Main navigation">
+      <a href="#home" class="text-2xl font-black tracking-wider">
+        CODED<span class="text-neon">.</span>
+        <span class="text-sm font-medium text-gray-400">ENTERTAINMENT</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#home" class="hover:text-neon transition">Home</a>
+        <a href="#about" class="hover:text-neon transition">About</a>
+        <a href="#packages" class="hover:text-neon transition">Packages</a>
+        <a href="#contact" class="bg-neon text-dark px-5 py-2 rounded-full font-bold hover:bg-white transition">Contact</a>
+      </div>
+
+      <details class="md:hidden relative">
+        <summary class="cursor-pointer list-none text-neon font-bold text-xl" aria-label="Open navigation menu">☰</summary>
+        <div class="absolute right-0 top-12 w-48 bg-panel border border-gray-700 rounded-lg shadow-xl p-4 flex flex-col gap-4">
+          <a href="#home" class="hover:text-neon">Home</a>
+          <a href="#about" class="hover:text-neon">About</a>
+          <a href="#packages" class="hover:text-neon">Packages</a>
+          <a href="#contact" class="hover:text-neon">Contact</a>
+        </div>
+      </details>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="relative min-h-[650px] flex items-center overflow-hidden">
+      <div class="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=2000&q=85"
+          alt="DJ performing at a concert with colorful stage lighting"
+          class="w-full h-full object-cover">
+        <div class="absolute inset-0 hero-overlay"></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-6 py-24 w-full">
+        <div class="max-w-2xl">
+          <p class="text-neon font-bold tracking-[0.3em] uppercase mb-5">Your Event. Your Soundtrack.</p>
+          <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6">
+            WE DON'T JUST <span class="text-neon neon-glow">PLAY MUSIC.</span> WE CREATE MOMENTS.
+          </h1>
+          <p class="text-gray-300 text-lg md:text-xl mb-10 leading-relaxed">
+            From unforgettable celebrations to packed dance floors,
+            Coded Entertainment brings the energy, music, and atmosphere
+            that make every event extraordinary.
+          </p>
+          <a href="#packages" class="inline-block bg-neon text-dark px-9 py-4 rounded-full font-extrabold uppercase tracking-wider hover:bg-white transition shadow-lg shadow-cyan-500/20">
+            Explore Packages →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 px-6">
+      <div class="max-w-5xl mx-auto text-center">
+        <p class="text-neon uppercase tracking-[0.25em] font-bold mb-4">About Coded Entertainment</p>
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-8">
+          THE PERFECT MIX OF <span class="text-neon">MUSIC & ENERGY</span>
+        </h2>
+        <p class="text-gray-400 text-lg leading-relaxed max-w-3xl mx-auto">
+          Great entertainment is about more than just playing songs.
+          It's about reading the crowd, creating the right atmosphere,
+          and keeping the energy alive. Coded Entertainment is committed
+          to making your special occasion an experience worth remembering.
+        </p>
+      </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section id="packages" class="py-24 bg-panel px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <p class="text-neon uppercase tracking-[0.25em] font-bold mb-4">What We Bring</p>
+          <h2 class="text-4xl md:text-5xl font-black">ENTERTAINMENT <span class="text-neon">PACKAGES</span></h2>
+          <p class="text-gray-400 mt-5">The right entertainment for every occasion.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Wedding Events -->
+          <article class="card-hover bg-dark border border-gray-800 rounded-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85"
+              alt="Elegant wedding reception with romantic décor"
+              class="w-full h-56 object-cover">
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-4">Wedding Events</h3>
+              <p class="text-gray-400 leading-relaxed mb-6">
+                From the ceremony to the last dance, create the perfect soundtrack for your special day.
+              </p>
+              <a href="#booking" class="text-neon font-bold hover:text-white transition">Request a Quote →</a>
+            </div>
+          </article>
+
+          <!-- Private Parties -->
+          <article class="card-hover bg-dark border border-gray-800 rounded-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80"
+              alt="Crowd celebrating at a live entertainment event"
+              class="w-full h-56 object-cover">
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-4">Private Parties</h3>
+              <p class="text-gray-400 leading-relaxed mb-6">
+                Birthdays, anniversaries, graduations, and celebrations. Bring your guests together with music they'll love.
+              </p>
+              <a href="#booking" class="text-neon font-bold hover:text-white transition">Request a Quote →</a>
+            </div>
+          </article>
+
+          <!-- Corporate Events -->
+          <article class="card-hover bg-dark border border-gray-800 rounded-2xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=85"
+              alt="Professionals enjoying a stylish corporate celebration"
+              class="w-full h-56 object-cover">
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-4">Corporate Events</h3>
+              <p class="text-gray-400 leading-relaxed mb-6">
+                Professional entertainment for company parties, networking events, and corporate celebrations.
+              </p>
+              <a href="#booking" class="text-neon font-bold hover:text-white transition">Request a Quote →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING INQUIRY FORM -->
+    <section id="booking" class="py-24 px-6">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <p class="text-neon uppercase tracking-[0.25em] font-bold mb-4">Let's Get Your Event Started</p>
+          <h2 class="text-4xl md:text-5xl font-black mb-5">BOOK YOUR <span class="text-neon">EVENT</span></h2>
+          <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+            Tell us a little about your event and what you're looking for.
+            We'll use your information to follow up about your entertainment needs.
+          </p>
+        </div>
+
+        <div class="bg-panel border border-gray-800 rounded-2xl p-6 md:p-10 shadow-xl">
+          <form id="bookingForm" class="space-y-6">
+            <div>
+              <h3 class="text-xl font-bold mb-5">Your Information</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <label for="customerName" class="block text-sm font-semibold mb-2">Full Name *</label>
+                  <input type="text" id="customerName" name="customerName" class="form-input" placeholder="Your name" autocomplete="name" required>
+                </div>
+                <div>
+                  <label for="customerEmail" class="block text-sm font-semibold mb-2">Email Address *</label>
+                  <input type="email" id="customerEmail" name="customerEmail" class="form-input" placeholder="you@example.com" autocomplete="email" required>
+                </div>
+                <div class="md:col-span-2">
+                  <label for="customerPhone" class="block text-sm font-semibold mb-2">Phone Number</label>
+                  <input type="tel" id="customerPhone" name="customerPhone" class="form-input" placeholder="(407) 555-1234" autocomplete="tel">
+                </div>
+              </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-6">
+              <h3 class="text-xl font-bold mb-5">Event Details</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <label for="eventDate" class="block text-sm font-semibold mb-2">Event Date *</label>
+                  <input type="date" id="eventDate" name="eventDate" class="form-input" required>
+                </div>
+                <div>
+                  <label for="eventType" class="block text-sm font-semibold mb-2">Event Type *</label>
+                  <select id="eventType" name="eventType" class="form-input" required>
+                    <option value="">Select Event Type</option>
+                    <option value="Wedding">Wedding</option>
+                    <option value="Birthday Party">Birthday Party</option>
+                    <option value="Private Party">Private Party</option>
+                    <option value="Corporate Event">Corporate Event</option>
+                    <option value="Graduation">Graduation</option>
+                    <option value="Anniversary">Anniversary</option>
+                    <option value="School Event">School Event</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="md:col-span-2">
+                  <label for="venue" class="block text-sm font-semibold mb-2">Event Venue / Location *</label>
+                  <input type="text" id="venue" name="venue" class="form-input" placeholder="Venue name, city, or address" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-6">
+              <h3 class="text-xl font-bold mb-5">Entertainment Preferences</h3>
+              <div>
+                <label for="entertainmentNeeds" class="block text-sm font-semibold mb-2">
+                  Tell Us About Your Entertainment Needs *
+                </label>
+                <textarea
+                  id="entertainmentNeeds"
+                  name="entertainmentNeeds"
+                  rows="5"
+                  class="form-input"
+                  placeholder="Tell us about the music, atmosphere, equipment, lighting, special requests, estimated guest count, or anything else you'd like us to know..."
+                  required></textarea>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <button type="submit" class="w-full bg-neon text-dark py-4 rounded-full font-extrabold uppercase tracking-wider hover:bg-white transition shadow-lg shadow-cyan-500/20">
+                Submit Booking Inquiry →
+              </button>
+              <p class="text-gray-500 text-xs text-center mt-4">
+                Submitting this form opens your email application with your inquiry ready to send.
+              </p>
+              <p id="formStatus" class="text-sm text-center mt-3 text-gray-400" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="py-24 px-6 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-black mb-6">
+          LET'S MAKE YOUR EVENT <span class="text-neon">UNFORGETTABLE.</span>
+        </h2>
+        <p class="text-gray-400 text-lg mb-9">
+          Ready to get the party started? Let's talk about your event.
+        </p>
+        <a href="#booking" class="inline-block bg-neon text-dark px-10 py-4 rounded-full font-extrabold uppercase hover:bg-white transition">
+          Book Your Event
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- CONTACT FOOTER -->
+  <footer id="contact" class="bg-black border-t border-gray-800 py-16 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-3xl font-black mb-4">CODED<span class="text-neon">.</span> ENTERTAINMENT</h2>
+        <p class="text-gray-400 leading-relaxed max-w-md">
+          Bringing people together through music, energy, and unforgettable entertainment experiences.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-bold mb-5">GET IN TOUCH</h3>
+        <p class="text-gray-400 mb-3">
+          Email:
+          <a href="mailto:Code@CodedEntertainment.com" class="text-neon hover:text-white transition">
+            Code@CodedEntertainment.com
+          </a>
+        </p>
+        <p class="text-gray-400 mb-3">
+          Phone:
+          <a href="tel:+14079068302" class="text-neon hover:text-white transition">
+            (407) 906-8302
+          </a>
+        </p>
+
+        <div class="flex gap-5 mt-6">
+          <!-- Replace # with your actual social media profile URLs -->
+          <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-neon transition">Instagram</a>
+          <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-neon transition">Facebook</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto border-t border-gray-800 mt-12 pt-8 text-center">
+      <p class="text-gray-500 text-sm">
+        © <span id="year"></span> Coded Entertainment. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Automatically update copyright year.
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Set minimum event date to the visitor's local date.
+    const eventDateInput = document.getElementById("eventDate");
+    const today = new Date();
+    const localToday = new Date(
+      today.getTime() - today.getTimezoneOffset() * 60000
+    ).toISOString().split("T")[0];
+    eventDateInput.min = localToday;
+
+    // Close mobile navigation after selecting a link.
+    document.querySelectorAll("header details a").forEach(link => {
+      link.addEventListener("click", () => {
+        link.closest("details").open = false;
+      });
+    });
+
+    // Prepare a booking inquiry email.
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      if (!this.reportValidity()) return;
+
+      const name = document.getElementById("customerName").value.trim();
+      const email = document.getElementById("customerEmail").value.trim();
+      const phone = document.getElementById("customerPhone").value.trim();
+      const date = document.getElementById("eventDate").value;
+      const venue = document.getElementById("venue").value.trim();
+      const eventType = document.getElementById("eventType").value;
+      const needs = document.getElementById("entertainmentNeeds").value.trim();
+
+      const subject = "New Booking Inquiry - " + eventType;
+      const body =
+`NEW BOOKING INQUIRY
+============================
+
+CUSTOMER INFORMATION
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone || "Not provided"}
+
+EVENT DETAILS
+
+Event Type: ${eventType}
+Event Date: ${date}
+Venue / Location: ${venue}
+
+ENTERTAINMENT NEEDS
+
+${needs}
+
+============================
+Coded Entertainment
+(407) 906-8302
+Code@CodedEntertainment.com`;
+
+      const mailtoLink =
+        "mailto:Code@CodedEntertainment.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+      document.getElementById("formStatus").textContent =
+        "Your email application should open with the inquiry prepared. Please send the email to complete your request.";
+
+      window.location.href = mailtoLink;
+    });
+  </script>
+
+</body>
+</html>
